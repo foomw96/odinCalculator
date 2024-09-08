@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'DSEG7Classic';
+    src: url('fonts/DSEG7Classic-Regular.ttf') format('truetype');
+  }
+
 .body {
     display: flex;
     flex-wrap: wrap;
@@ -24,8 +29,8 @@ button {
     border-bottom: 10px solid black;
     text-align: center;
 
-    font-size: 5em;
-    font-family: 'VT323';
+    font-size: 2rem;
+    font-family: 'DSEG7Classic';
 
     display: flex;
     justify-content: flex-end;
