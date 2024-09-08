@@ -29,7 +29,7 @@ button {
     border-bottom: 10px solid black;
     text-align: center;
 
-    font-size: 2rem;
+    font-size: clamp(1rem, 10vw, 10rem);
     font-family: 'DSEG7Classic';
 
     display: flex;
