@@ -71,7 +71,7 @@ operatorButtons.forEach((button) => button.addEventListener('click',()=>{
     else if (operator && prevNum && currentNum) {
         // if there is already an operator entered and 2 numbers, then operate
         prevNum = String(
-            operate(operator, parseInt(prevNum), parseInt(currentNum)));
+            operate(operator, parseFloat(prevNum), parseFloat(currentNum)));
         
         prevNum = prevNum.slice(0, Math.min(11, prevNum.length));
 
@@ -95,7 +95,7 @@ document.querySelector('#equals').addEventListener('click', ()=>{
     if (operator && prevNum && currentNum) {
         // if there is already an operator entered and 2 numbers, then operate
         prevNum = String(
-            operate(operator, parseInt(prevNum), parseInt(currentNum)));
+            operate(operator, parseFloat(prevNum), parseFloat(currentNum)));
         
         prevNum = prevNum.slice(0, Math.min(11, prevNum.length));
 

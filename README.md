@@ -6,7 +6,7 @@ Calculator made using HTML, CSS and Javascript
 ## Made by 
 Foo Ming Wei. Currently a pharmacist, future software engineer!
 
-### TO DO
+## TO DO
 - limit characters when typing in
 - sign button
 - percentage button
@@ -19,3 +19,4 @@ Foo Ming Wei. Currently a pharmacist, future software engineer!
 - design
     - button colors
     - background colors
+    - highlight the current operator?
