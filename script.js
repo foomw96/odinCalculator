@@ -17,17 +17,27 @@ function divide(a, b) {
 }
 
 function operate(operator, a, b) {
+    let ans = 0;
+    
     switch (operator) {
         case "add":
-            return add(a,b);
+            ans = add(a,b);
+            break;
         case "subtract":
-            return subtract(a,b);
+            ans = subtract(a,b);
+            break;
         case "multiply":
-            return multiply(a,b);
+            ans = multiply(a,b);
+            break;
         case "divide":
-            return divide(a,b);
-        default:
-            return "Invalid operator";
+            ans = divide(a,b);
+            break;
+    }
+
+    if (ans > 9999999 || ans < 0.000001) {
+        return ans.toExponential(2);
+    } else {
+        return ans;
     }
 }
 
@@ -73,7 +83,7 @@ operatorButtons.forEach((button) => button.addEventListener('click',()=>{
         prevNum = String(
             operate(operator, parseFloat(prevNum), parseFloat(currentNum)));
         
-        prevNum = prevNum.slice(0, Math.min(11, prevNum.length));
+        prevNum = prevNum.slice(0, Math.min(9, prevNum.length));
 
         display.textContent = prevNum;
         currentNum = "";
@@ -97,7 +107,7 @@ document.querySelector('#equals').addEventListener('click', ()=>{
         prevNum = String(
             operate(operator, parseFloat(prevNum), parseFloat(currentNum)));
         
-        prevNum = prevNum.slice(0, Math.min(11, prevNum.length));
+        prevNum = prevNum.slice(0, Math.min(9, prevNum.length));
 
         display.textContent = prevNum;        
         

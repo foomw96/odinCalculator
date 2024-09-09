@@ -15,6 +15,8 @@
 button {
     width: 25%;
     aspect-ratio: 1 / 1;
+    border: 1px black solid;
+    background-color: gainsboro;
 }
 
 #zero {
@@ -35,5 +37,12 @@ button {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
 
+.operator, #equals {
+    background-color: darkorange;
+}
+
+#clear, #sign, #percentage {
+    background-color: floralwhite;
 }
