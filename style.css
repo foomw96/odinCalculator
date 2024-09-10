@@ -22,6 +22,10 @@ button {
     font-size: clamp(1rem, 10vw, 3rem);
 }
 
+button:hover {
+    background-color: rgb(179, 177, 177);
+}
+
 #zero {
     width: 50%;
     aspect-ratio: 2 / 1
@@ -47,6 +51,14 @@ button {
     background-color: darkorange;
 }
 
+.operator:hover, #equals:hover {
+    background-color: orange;
+}
+
 #clear, #sign, #percentage {
     background-color: floralwhite;
+}
+
+#clear:hover, #sign:hover, #percentage:hover {
+    background-color: rgb(213, 209, 200);
 }
