@@ -8,15 +8,18 @@
     flex-wrap: wrap;
     width: 50vw;
     margin: auto;
-    border: 10px solid black;
+    border: 10px double black;
+    border-radius: 10px;
     background-color: black;
 }
 
 button {
     width: 25%;
     aspect-ratio: 1 / 1;
-    border: 1px black solid;
+    border: 3px black ridge;
+    border-radius: 7px;
     background-color: gainsboro;
+    font-size: clamp(1rem, 10vw, 3rem);
 }
 
 #zero {
@@ -29,6 +32,7 @@ button {
     aspect-ratio: 4 / 1;
     background-color: grey;
     border-bottom: 10px solid black;
+    border-top: 3px solid black;;
     text-align: center;
 
     font-size: clamp(1rem, 10vw, 5rem);
