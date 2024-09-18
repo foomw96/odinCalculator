@@ -15,8 +15,3 @@ Foo Ming Wei. Currently a pharmacist, future software engineer!
 - backspace button
 
 - keyboard support
-
-- design
-    - button colors
-    - background colors
-    - highlight the current operator?

@@ -133,3 +133,11 @@ document.querySelector('#equals').addEventListener('click', ()=>{
     // but still can operate, retaining prevNum
     equated = true;
 });
+
+// sign button logic
+document.querySelector('#sign').addEventListener('click', () => {
+    if (currentNum !== "0") {
+        currentNum = String(parseFloat(currentNum) * -1);
+        display.textContent = `${currentNum}`;
+    }
+});
