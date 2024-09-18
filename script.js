@@ -34,7 +34,7 @@ function operate(operator, a, b) {
             break;
     }
 
-    if (ans > 9999999 || (ans > 0 && ans < 0.000001) || ans < -9999999) {
+    if (ans > 9999999 || (ans > 0 && ans < 0.0001) || (ans < 0 && ans > -0.0001) || ans < -9999999) {
         return ans.toExponential(2);
     } else {
         return ans;
@@ -140,4 +140,29 @@ document.querySelector('#sign').addEventListener('click', () => {
         currentNum = String(parseFloat(currentNum) * -1);
         display.textContent = `${currentNum}`;
     }
+});
+
+// percentage button logic
+document.querySelector('#percentage').addEventListener('click', () => {
+    
+    let percentage = 0;
+
+    if (equated) {
+        currentNum = prevNum;
+        equated = false;
+    }
+    
+    percentage = parseFloat(currentNum) * 0.01;
+
+    // to display very small numbers as exponents
+    if ((percentage > 0 && percentage <= 0.00001) || (percentage < 0 && percentage > -0.00001)) {
+        percentage = percentage.toExponential(2);
+    }
+
+    currentNum = String(percentage);
+    currentNum = currentNum.slice(0, Math.min(9, currentNum.length));
+
+
+    display.textContent = `${currentNum}`;
+    
 });
