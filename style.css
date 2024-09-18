@@ -19,7 +19,7 @@ button {
     border: 3px black ridge;
     border-radius: 7px;
     background-color: gainsboro;
-    font-size: clamp(1rem, 10vw, 3rem);
+    font-size: clamp(0.1rem, 5vw, 3rem);
 }
 
 button:hover {
@@ -51,7 +51,7 @@ button:hover {
     background-color: darkorange;
 }
 
-.operator:hover, #equals:hover {
+.operator:hover, .operator.current, #equals:hover {
     background-color: orange;
 }
 
