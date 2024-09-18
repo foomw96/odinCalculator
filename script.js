@@ -34,7 +34,7 @@ function operate(operator, a, b) {
             break;
     }
 
-    if (ans > 9999999 || ans < 0.000001) {
+    if (ans > 9999999 || (ans > 0 && ans < 0.000001) || ans < -9999999) {
         return ans.toExponential(2);
     } else {
         return ans;
@@ -56,6 +56,7 @@ numButtons.forEach((button) => button.addEventListener('click', () =>{
         currentNum = "0";
         operator = "";
         equated = false;
+        operatorButtons.forEach((button) => button.classList.remove("current"));
     }
     
     if (currentNum === "0" && button.value === "0") {
@@ -75,6 +76,7 @@ document.querySelector('#clear').addEventListener('click', ()=>{
     prevNum  = "";
     currentNum = "0";
     operator = "";
+    operatorButtons.forEach((button) => button.classList.remove("current"));
     display.textContent = `${currentNum}`;
 });
 
@@ -104,6 +106,8 @@ operatorButtons.forEach((button) => button.addEventListener('click',()=>{
     }
 
     operator = `${button.value}`;
+    operatorButtons.forEach((button) => button.classList.remove("current"));
+    button.classList.add("current");
 
 }));
 
