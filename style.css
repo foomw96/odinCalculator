@@ -45,6 +45,7 @@ button:hover {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding-right: 1rem;
 }
 
 .operator, #equals {

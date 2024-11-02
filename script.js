@@ -66,7 +66,9 @@ numButtons.forEach((button) => button.addEventListener('click', () =>{
     if (currentNum === "0"){
         currentNum = button.value;
     } else {
-        currentNum += button.value;
+        if (currentNum.length < 8) {
+            currentNum += button.value;
+        }
     }
     
     display.textContent = `${currentNum}`;
@@ -140,6 +142,10 @@ document.querySelector('#sign').addEventListener('click', () => {
         currentNum = String(parseFloat(currentNum) * -1);
         display.textContent = `${currentNum}`;
     }
+
+    // sign button for after equate?? 
+    // right now it changes sign for 'currentNum'
+
 });
 
 // percentage button logic
@@ -165,4 +171,22 @@ document.querySelector('#percentage').addEventListener('click', () => {
 
     display.textContent = `${currentNum}`;
     
+});
+
+// point button logic
+document.querySelector('#point').addEventListener('click', () => {
+    
+    // if just coming out of an equate, should be 0. something
+    // right now it points the currentNum
+
+    if (equated) {
+        currentNum = "0.";
+        display.textContent = `${currentNum}`;
+        equated = false;
+    } else if (!currentNum.includes('.')){
+        currentNum += ".";
+        display.textContent = `${currentNum}`;
+    }
+    
+
 });

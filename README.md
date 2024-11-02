@@ -8,10 +8,13 @@ Foo Ming Wei. Currently a pharmacist, future software engineer!
 
 ## TO DO
 - limit characters when typing in
-- sign button
 - percentage button
 - point button
 
 - backspace button
 
 - keyboard support
+
+
+## bugs
+- can still add on to the number string after its displayed as exponential..
